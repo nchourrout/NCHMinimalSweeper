@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03C173FD1AA3A73300131801 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C173FC1AA3A73300131801 /* main.m */; };
+		03C174001AA3A73300131801 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C173FF1AA3A73300131801 /* AppDelegate.m */; };
+		03C174031AA3A73300131801 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C174021AA3A73300131801 /* ViewController.m */; };
+		03C174061AA3A73300131801 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C174041AA3A73300131801 /* Main.storyboard */; };
+		03C174081AA3A73300131801 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C174071AA3A73300131801 /* Images.xcassets */; };
+		03C1740B1AA3A73300131801 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C174091AA3A73300131801 /* LaunchScreen.xib */; };
+		03C174171AA3A73300131801 /* NCHMinimalSweeperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C174161AA3A73300131801 /* NCHMinimalSweeperTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03C174111AA3A73300131801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03C173EF1AA3A73300131801 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03C173F61AA3A73300131801;
+			remoteInfo = NCHMinimalSweeper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03C173F71AA3A73300131801 /* NCHMinimalSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCHMinimalSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03C173FB1AA3A73300131801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03C173FC1AA3A73300131801 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03C173FE1AA3A73300131801 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		03C173FF1AA3A73300131801 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		03C174011AA3A73300131801 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		03C174021AA3A73300131801 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		03C174051AA3A73300131801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03C174071AA3A73300131801 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		03C1740A1AA3A73300131801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		03C174101AA3A73300131801 /* NCHMinimalSweeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCHMinimalSweeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03C174151AA3A73300131801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03C174161AA3A73300131801 /* NCHMinimalSweeperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCHMinimalSweeperTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03C173F41AA3A73300131801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03C1740D1AA3A73300131801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C173EE1AA3A73300131801 = {
+			isa = PBXGroup;
+			children = (
+				03C173F91AA3A73300131801 /* NCHMinimalSweeper */,
+				03C174131AA3A73300131801 /* NCHMinimalSweeperTests */,
+				03C173F81AA3A73300131801 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03C173F81AA3A73300131801 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03C173F71AA3A73300131801 /* NCHMinimalSweeper.app */,
+				03C174101AA3A73300131801 /* NCHMinimalSweeperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03C173F91AA3A73300131801 /* NCHMinimalSweeper */ = {
+			isa = PBXGroup;
+			children = (
+				03C173FE1AA3A73300131801 /* AppDelegate.h */,
+				03C173FF1AA3A73300131801 /* AppDelegate.m */,
+				03C174011AA3A73300131801 /* ViewController.h */,
+				03C174021AA3A73300131801 /* ViewController.m */,
+				03C174041AA3A73300131801 /* Main.storyboard */,
+				03C174071AA3A73300131801 /* Images.xcassets */,
+				03C174091AA3A73300131801 /* LaunchScreen.xib */,
+				03C173FA1AA3A73300131801 /* Supporting Files */,
+			);
+			path = NCHMinimalSweeper;
+			sourceTree = "<group>";
+		};
+		03C173FA1AA3A73300131801 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03C173FB1AA3A73300131801 /* Info.plist */,
+				03C173FC1AA3A73300131801 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03C174131AA3A73300131801 /* NCHMinimalSweeperTests */ = {
+			isa = PBXGroup;
+			children = (
+				03C174161AA3A73300131801 /* NCHMinimalSweeperTests.m */,
+				03C174141AA3A73300131801 /* Supporting Files */,
+			);
+			path = NCHMinimalSweeperTests;
+			sourceTree = "<group>";
+		};
+		03C174141AA3A73300131801 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03C174151AA3A73300131801 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03C173F61AA3A73300131801 /* NCHMinimalSweeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03C1741A1AA3A73300131801 /* Build configuration list for PBXNativeTarget "NCHMinimalSweeper" */;
+			buildPhases = (
+				03C173F31AA3A73300131801 /* Sources */,
+				03C173F41AA3A73300131801 /* Frameworks */,
+				03C173F51AA3A73300131801 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NCHMinimalSweeper;
+			productName = NCHMinimalSweeper;
+			productReference = 03C173F71AA3A73300131801 /* NCHMinimalSweeper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03C1740F1AA3A73300131801 /* NCHMinimalSweeperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03C1741D1AA3A73300131801 /* Build configuration list for PBXNativeTarget "NCHMinimalSweeperTests" */;
+			buildPhases = (
+				03C1740C1AA3A73300131801 /* Sources */,
+				03C1740D1AA3A73300131801 /* Frameworks */,
+				03C1740E1AA3A73300131801 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03C174121AA3A73300131801 /* PBXTargetDependency */,
+			);
+			name = NCHMinimalSweeperTests;
+			productName = NCHMinimalSweeperTests;
+			productReference = 03C174101AA3A73300131801 /* NCHMinimalSweeperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03C173EF1AA3A73300131801 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Nico;
+				TargetAttributes = {
+					03C173F61AA3A73300131801 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					03C1740F1AA3A73300131801 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 03C173F61AA3A73300131801;
+					};
+				};
+			};
+			buildConfigurationList = 03C173F21AA3A73300131801 /* Build configuration list for PBXProject "NCHMinimalSweeper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03C173EE1AA3A73300131801;
+			productRefGroup = 03C173F81AA3A73300131801 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03C173F61AA3A73300131801 /* NCHMinimalSweeper */,
+				03C1740F1AA3A73300131801 /* NCHMinimalSweeperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03C173F51AA3A73300131801 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C174061AA3A73300131801 /* Main.storyboard in Resources */,
+				03C1740B1AA3A73300131801 /* LaunchScreen.xib in Resources */,
+				03C174081AA3A73300131801 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03C1740E1AA3A73300131801 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03C173F31AA3A73300131801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C174031AA3A73300131801 /* ViewController.m in Sources */,
+				03C174001AA3A73300131801 /* AppDelegate.m in Sources */,
+				03C173FD1AA3A73300131801 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03C1740C1AA3A73300131801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C174171AA3A73300131801 /* NCHMinimalSweeperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03C174121AA3A73300131801 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03C173F61AA3A73300131801 /* NCHMinimalSweeper */;
+			targetProxy = 03C174111AA3A73300131801 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03C174041AA3A73300131801 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03C174051AA3A73300131801 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		03C174091AA3A73300131801 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03C1740A1AA3A73300131801 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03C174181AA3A73300131801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03C174191AA3A73300131801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03C1741B1AA3A73300131801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NCHMinimalSweeper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03C1741C1AA3A73300131801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NCHMinimalSweeper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03C1741E1AA3A73300131801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NCHMinimalSweeperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NCHMinimalSweeper.app/NCHMinimalSweeper";
+			};
+			name = Debug;
+		};
+		03C1741F1AA3A73300131801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NCHMinimalSweeperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NCHMinimalSweeper.app/NCHMinimalSweeper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03C173F21AA3A73300131801 /* Build configuration list for PBXProject "NCHMinimalSweeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C174181AA3A73300131801 /* Debug */,
+				03C174191AA3A73300131801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03C1741A1AA3A73300131801 /* Build configuration list for PBXNativeTarget "NCHMinimalSweeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C1741B1AA3A73300131801 /* Debug */,
+				03C1741C1AA3A73300131801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03C1741D1AA3A73300131801 /* Build configuration list for PBXNativeTarget "NCHMinimalSweeperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C1741E1AA3A73300131801 /* Debug */,
+				03C1741F1AA3A73300131801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03C173EF1AA3A73300131801 /* Project object */;
+}
