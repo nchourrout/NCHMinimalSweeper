@@ -122,5 +122,4 @@ static NSString * const CellIdentifier  = @"NCHCell";
     [self newGame];
 }
 
-
 @end

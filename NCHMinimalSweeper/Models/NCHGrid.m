@@ -125,11 +125,6 @@ static const NSUInteger MineNumber = 10;
 
 - (NSSet *)cheat
 {
-    if ([self validate]) {
-        NSLog(@"No more moves");
-        return nil;
-    }
-    
     BOOL cheated = NO;
     while(!cheated && ![self validate]) {
         NCHPosition *randomPosition = [NCHPosition randomPositionWithGridSize:GridSize];

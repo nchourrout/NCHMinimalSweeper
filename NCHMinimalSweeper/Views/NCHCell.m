@@ -18,8 +18,6 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.layer.borderColor = [UIColor blackColor].CGColor;
-    self.layer.borderWidth = 1.5f;
     self.layer.cornerRadius = 4.0f;
     if (self.item.cleared) {
         [self reveal];
@@ -49,7 +47,7 @@
 - (void)customizeForHidden
 {
     self.label.text = @"";
-    self.backgroundColor = [UIColor lightGrayColor];
+    self.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.8f];
     self.label.textColor = [UIColor blackColor];
     self.userInteractionEnabled = YES;
 }
