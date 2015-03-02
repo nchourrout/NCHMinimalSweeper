@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NCHViewController.h
 //  NCHMinimalSweeper
 //
 //  Created by Nico on 01/03/2015.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NCHViewController : UIViewController
 
 @end
 
