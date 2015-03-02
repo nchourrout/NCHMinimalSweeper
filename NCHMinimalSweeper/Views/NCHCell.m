@@ -10,8 +10,7 @@
 #import "NCHItem.h"
 
 @interface NCHCell ()
-//@property (weak, nonatomic) IBOutlet UILabel *label;
-
+@property (weak, nonatomic) IBOutlet UILabel *label;
 @end
 
 @implementation NCHCell
@@ -21,6 +20,7 @@
     [super layoutSubviews];
     self.layer.borderColor = [UIColor blackColor].CGColor;
     self.layer.borderWidth = 1.5f;
+    self.layer.cornerRadius = 4.0f;
     if (self.item.cleared) {
         [self reveal];
     } else {
@@ -31,9 +31,12 @@
 - (void)reveal
 {
     if (self.item.hasMine) {
-        [self customizedForMine];
+        self.label.text = @"M";
+        self.label.textColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor redColor];
     } else {
-        [self customizeForNoMine];
+        self.backgroundColor = [UIColor whiteColor];
+        self.label.text = self.item.adjacentMines == 0 ? @"" : [NSString stringWithFormat:@"%ld", self.item.adjacentMines];
     }
     self.userInteractionEnabled = NO;
 }
@@ -46,22 +49,9 @@
 - (void)customizeForHidden
 {
     self.label.text = @"";
-    self.backgroundColor = [UIColor grayColor];
+    self.backgroundColor = [UIColor lightGrayColor];
     self.label.textColor = [UIColor blackColor];
     self.userInteractionEnabled = YES;
-}
-
-- (void)customizedForMine
-{
-    self.label.text = @"M";
-    self.label.textColor = [UIColor whiteColor];
-    self.backgroundColor = [UIColor redColor];
-}
-
-- (void)customizeForNoMine
-{
-    self.backgroundColor = [UIColor whiteColor];
-    self.label.text = self.item.adjacentMines == 0 ? @"" : [NSString stringWithFormat:@"%ld", self.item.adjacentMines];
 }
 
 

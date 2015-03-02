@@ -54,6 +54,7 @@ static const NSUInteger MineNumber = 10;
             minesLeftToPlace--;
         }
     }
+    NSLog(@"MineField:\n%@", self);
 }
 
 
@@ -65,6 +66,7 @@ static const NSUInteger MineNumber = 10;
     }
     
     item.hasMine = YES;
+    NSLog(@"Adding mine at position: %@", position);
     
     NSArray *neighbourPositions = [position neighboursWithGridSize:self.size];
     for (NCHPosition *neighbour in neighbourPositions) {
@@ -95,14 +97,16 @@ static const NSUInteger MineNumber = 10;
     
     while (queue.count) {
         NCHPosition *lastPosition = [queue lastObject];
+        [queue removeLastObject];
         
         NCHItem *item = [self itemAtPosition:lastPosition];
         if (!item) {
-            return nil;
+            continue;
         }
         
         item.cleared = YES;
         self.clearedCount++;
+        NSLog(@"%ld moves left", [self movesLeft]);
         
         if (item.adjacentMines == 0 && !item.hasMine) {
             NSMutableSet *newPositions = [NSMutableSet setWithArray:[lastPosition neighboursWithGridSize:self.size]];
@@ -113,29 +117,39 @@ static const NSUInteger MineNumber = 10;
             
             [visitedPositions unionSet:newPositions];
         }
-
-        [queue removeLastObject];
     }
     return visitedPositions;
 }
 
 
 
-- (void)cheat
+- (NSSet *)cheat
 {
+    if ([self validate]) {
+        NSLog(@"No more moves");
+        return nil;
+    }
+    
     BOOL cheated = NO;
-    while(!cheated) {
+    while(!cheated && ![self validate]) {
         NCHPosition *randomPosition = [NCHPosition randomPositionWithGridSize:GridSize];
         NCHItem *item = [self itemAtPosition:randomPosition];
         if (!item.cleared && !item.hasMine) {
-            [self clearItemAtPosition:randomPosition];
+            cheated = YES;
+            return [self clearItemAtPosition:randomPosition];
         }
     }
+    return nil;
+}
+
+- (NSUInteger)movesLeft
+{
+    return GridSize * GridSize - self.clearedCount - MineNumber;
 }
 
 - (BOOL)validate
 {
-    return GridSize * GridSize - self.clearedCount == MineNumber;
+    return [self movesLeft] == 0;
 }
 
 - (NSUInteger)size
@@ -147,7 +161,7 @@ static const NSUInteger MineNumber = 10;
 
 - (NSString *)description
 {
-    NSMutableString *description = [@"MineGrid:\n" mutableCopy];
+    NSMutableString *description = [@"" mutableCopy];
     for (NSArray *row in self.grid) {
         for (NCHItem *item in row) {
             [description appendString:item.description];

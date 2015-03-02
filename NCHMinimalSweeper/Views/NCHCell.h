@@ -11,10 +11,6 @@
 
 @interface NCHCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *label;
-
 @property (nonatomic) NCHItem *item;
-
-- (void)reveal;
 
 @end

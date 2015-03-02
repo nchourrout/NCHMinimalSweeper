@@ -12,7 +12,7 @@
 #import "NCHPosition.h"
 #import "NCHItem.h"
 
-@interface NCHViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface NCHViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) NCHGrid *grid;
 @end
@@ -48,8 +48,13 @@ static NSString * const CellIdentifier  = @"NCHCell";
 
 - (IBAction)cheatPressed:(id)sender
 {
-    [self.grid cheat];
-    [self.collectionView reloadData];
+    NSSet *clearedPositions = [self.grid cheat];
+    if (!clearedPositions) { // No more moves, we've won
+        [self alertForEndOfGameWithSuccess:YES];
+        return;
+    }
+    
+    [self.collectionView reloadItemsAtIndexPaths:[NCHPosition indexPathsFromPositionSet:clearedPositions]];
 }
 
 #pragma mark - <UICollectionViewDataSource>
@@ -84,12 +89,7 @@ static NSString * const CellIdentifier  = @"NCHCell";
     NCHPosition *position = [[NCHPosition alloc] initWithX:indexPath.item
                                                          Y:indexPath.section];
     
-    NCHItem *item = [self.grid itemAtPosition:position];
-    NCHCell *cell = (NCHCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
-    item.cleared = YES;
-    [cell reveal];
-    
-    /*NSSet *clearedPositions = [self.grid clearItemAtPosition:position];
+    NSSet *clearedPositions = [self.grid clearItemAtPosition:position];
     
     if (clearedPositions.count == 1) {
         NCHItem *item = [self.grid itemAtPosition:[clearedPositions allObjects][0]];
@@ -98,15 +98,7 @@ static NSString * const CellIdentifier  = @"NCHCell";
         }
     }
     
-    NSMutableArray *indexPaths = [@[] mutableCopy];
-    for (NCHPosition *position in clearedPositions) {
-        [indexPaths addObject:position.indexPath];
-    }
-    
-    [self.collectionView reloadData];
-    [self.collectionView reloadInputViews];
-    [self.collectionView reloadItemsAtIndexPaths:indexPaths];
-     */
+    [self.collectionView reloadItemsAtIndexPaths:[NCHPosition indexPathsFromPositionSet:clearedPositions]];
 }
 
 #pragma mark - Alert
@@ -118,9 +110,17 @@ static NSString * const CellIdentifier  = @"NCHCell";
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
                                                     message:@""
                                                    delegate:self
-                                          cancelButtonTitle:NSLocalizedString(@"OK", @"Ok alert button")
+                                          cancelButtonTitle:NSLocalizedString(@"New Game", @"New Game button")
                                           otherButtonTitles:nil];
     [alert show];
 }
+
+#pragma mark - <UIAlertViewDelegate>
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self newGame];
+}
+
 
 @end

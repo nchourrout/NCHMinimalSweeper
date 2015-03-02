@@ -10,16 +10,17 @@
 
 @interface NCHPosition : NSObject
 
-@property (nonatomic, readonly) NSInteger x;
-@property (nonatomic, readonly) NSInteger y;
+@property (nonatomic, readonly) NSUInteger x;
+@property (nonatomic, readonly) NSUInteger y;
 
-- (instancetype)initWithX:(NSInteger)x
-                        Y:(NSInteger)y;
+- (instancetype)initWithX:(NSUInteger)x
+                        Y:(NSUInteger)y;
 
 
 - (NSArray *)neighboursWithGridSize:(NSUInteger)size;
-+ (NCHPosition *)randomPositionWithGridSize:(NSUInteger)size;
-
 - (NSIndexPath *)indexPath;
+
++ (NCHPosition *)randomPositionWithGridSize:(NSUInteger)size;
++ (NSArray *)indexPathsFromPositionSet:(NSSet *)set;
 
 @end

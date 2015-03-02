@@ -16,7 +16,7 @@
 
 - (void)addMines;
 
-- (void)cheat;
+- (NSSet *)cheat;
 
 - (BOOL)validate;
 

@@ -12,7 +12,6 @@
 		03C174061AA3A73300131801 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C174041AA3A73300131801 /* Main.storyboard */; };
 		03C174081AA3A73300131801 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C174071AA3A73300131801 /* Images.xcassets */; };
 		03C1740B1AA3A73300131801 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C174091AA3A73300131801 /* LaunchScreen.xib */; };
-		03C174171AA3A73300131801 /* NCHMinimalSweeperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C174161AA3A73300131801 /* NCHMinimalSweeperTests.m */; };
 		03C1742A1AA3A7B700131801 /* NCHGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C174221AA3A7B700131801 /* NCHGrid.m */; };
 		03C1742B1AA3A7B700131801 /* NCHGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C174221AA3A7B700131801 /* NCHGrid.m */; };
 		03C1742C1AA3A7B700131801 /* NCHItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C174241AA3A7B700131801 /* NCHItem.m */; };
@@ -23,6 +22,8 @@
 		03C174311AA3A7B700131801 /* NCHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C174291AA3A7B700131801 /* NCHViewController.m */; };
 		03C174351AA3BBF300131801 /* NCHCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C174341AA3BBF300131801 /* NCHCell.m */; };
 		03C174361AA3BBF300131801 /* NCHCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C174341AA3BBF300131801 /* NCHCell.m */; };
+		03C20C531AA4A53A00F186A4 /* NCHPositionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C20C521AA4A53A00F186A4 /* NCHPositionTests.m */; };
+		03C20C551AA4AFE500F186A4 /* NCHGridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C20C541AA4AFE500F186A4 /* NCHGridTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,6 @@
 		03C1740A1AA3A73300131801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		03C174101AA3A73300131801 /* NCHMinimalSweeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCHMinimalSweeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C174151AA3A73300131801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03C174161AA3A73300131801 /* NCHMinimalSweeperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCHMinimalSweeperTests.m; sourceTree = "<group>"; };
 		03C174211AA3A7B700131801 /* NCHGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHGrid.h; sourceTree = "<group>"; };
 		03C174221AA3A7B700131801 /* NCHGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHGrid.m; sourceTree = "<group>"; };
 		03C174231AA3A7B700131801 /* NCHItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHItem.h; sourceTree = "<group>"; };
@@ -57,6 +57,8 @@
 		03C174291AA3A7B700131801 /* NCHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHViewController.m; sourceTree = "<group>"; };
 		03C174331AA3BBF300131801 /* NCHCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHCell.h; sourceTree = "<group>"; };
 		03C174341AA3BBF300131801 /* NCHCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHCell.m; sourceTree = "<group>"; };
+		03C20C521AA4A53A00F186A4 /* NCHPositionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHPositionTests.m; sourceTree = "<group>"; };
+		03C20C541AA4AFE500F186A4 /* NCHGridTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHGridTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +125,9 @@
 		03C174131AA3A73300131801 /* NCHMinimalSweeperTests */ = {
 			isa = PBXGroup;
 			children = (
-				03C174161AA3A73300131801 /* NCHMinimalSweeperTests.m */,
 				03C174141AA3A73300131801 /* Supporting Files */,
+				03C20C521AA4A53A00F186A4 /* NCHPositionTests.m */,
+				03C20C541AA4AFE500F186A4 /* NCHGridTests.m */,
 			);
 			path = NCHMinimalSweeperTests;
 			sourceTree = "<group>";
@@ -282,11 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C174171AA3A73300131801 /* NCHMinimalSweeperTests.m in Sources */,
 				03C1742B1AA3A7B700131801 /* NCHGrid.m in Sources */,
 				03C1742F1AA3A7B700131801 /* NCHPosition.m in Sources */,
+				03C20C551AA4AFE500F186A4 /* NCHGridTests.m in Sources */,
 				03C1742D1AA3A7B700131801 /* NCHItem.m in Sources */,
 				03C174311AA3A7B700131801 /* NCHViewController.m in Sources */,
+				03C20C531AA4A53A00F186A4 /* NCHPositionTests.m in Sources */,
 				03C174361AA3BBF300131801 /* NCHCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

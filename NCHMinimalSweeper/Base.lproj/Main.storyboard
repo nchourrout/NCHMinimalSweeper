@@ -39,7 +39,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88P-dI-5G6">
-                                                    <rect key="frame" x="0.0" y="9" width="38" height="21"/>
+                                                    <rect key="frame" x="0.0" y="9" width="38" height="20.5"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -65,7 +65,8 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxw-MV-FTo">
-                                <rect key="frame" x="133" y="467" width="54" height="30"/>
+                                <rect key="frame" x="125" y="461" width="70" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Validate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -73,35 +74,46 @@
                                     <action selector="validatePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="r7q-Nb-dJw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMd-ai-jLo">
-                                <rect key="frame" x="235" y="467" width="31" height="30"/>
-                                <state key="normal" title="New">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="newGamePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gp2-gU-wTx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acG-px-P0L">
-                                <rect key="frame" x="53" y="467" width="41" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUr-eR-XT6">
+                                <rect key="frame" x="36" y="461" width="53" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Cheat">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cheatPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KWu-fn-Coz"/>
+                                    <action selector="cheatPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aia-22-cEM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ye-x9-zFh">
+                                <rect key="frame" x="120.5" y="40" width="79" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKZ-6e-Mc5">
+                                <rect key="frame" x="244" y="461" width="40" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="New">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="validatePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="poe-7y-pEV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="qMd-ai-jLo" firstAttribute="leading" secondItem="cxw-MV-FTo" secondAttribute="trailing" constant="48" id="3gY-G0-Cfp"/>
+                            <constraint firstItem="Z4T-iQ-Ck1" firstAttribute="top" secondItem="cxw-MV-FTo" secondAttribute="bottom" constant="71" id="4e6-Zh-0pb"/>
                             <constraint firstAttribute="centerY" secondItem="nNs-bq-73i" secondAttribute="centerY" constant="84" id="B3b-z4-AiO"/>
-                            <constraint firstItem="acG-px-P0L" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="37" id="PFd-ZW-pBR"/>
+                            <constraint firstItem="8Ye-x9-zFh" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="40" id="GOs-nw-Vlk"/>
                             <constraint firstAttribute="centerX" secondItem="nNs-bq-73i" secondAttribute="centerX" id="gI2-SV-TRU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qMd-ai-jLo" secondAttribute="trailing" constant="38" id="mdK-W2-cPj"/>
+                            <constraint firstAttribute="centerX" secondItem="cxw-MV-FTo" secondAttribute="centerX" id="gZu-Fl-CTJ"/>
+                            <constraint firstAttribute="centerX" secondItem="8Ye-x9-zFh" secondAttribute="centerX" id="hbM-dP-C3f"/>
+                            <constraint firstItem="sUr-eR-XT6" firstAttribute="centerY" secondItem="HKZ-6e-Mc5" secondAttribute="centerY" id="iz2-iT-6fD"/>
+                            <constraint firstItem="sUr-eR-XT6" firstAttribute="centerY" secondItem="cxw-MV-FTo" secondAttribute="centerY" id="mBn-oR-8Sc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HKZ-6e-Mc5" secondAttribute="trailing" constant="20" id="nF3-eJ-Emh"/>
                             <constraint firstItem="Z4T-iQ-Ck1" firstAttribute="top" secondItem="cxw-MV-FTo" secondAttribute="bottom" constant="71" id="peX-e5-B7X"/>
-                            <constraint firstItem="qMd-ai-jLo" firstAttribute="baseline" secondItem="cxw-MV-FTo" secondAttribute="baseline" id="reO-7k-0xc"/>
-                            <constraint firstItem="qMd-ai-jLo" firstAttribute="baseline" secondItem="acG-px-P0L" secondAttribute="baseline" id="wIB-as-zYd"/>
+                            <constraint firstItem="sUr-eR-XT6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="qb3-gY-Fwz"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
