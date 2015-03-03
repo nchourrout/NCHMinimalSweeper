@@ -57,6 +57,19 @@ static const NSUInteger MineNumber = 10;
     NSLog(@"MineField:\n%@", self);
 }
 
+- (NSSet *)revealMines:(BOOL)show
+{
+    NSMutableSet *updatedPositions = [[NSMutableSet alloc] init];
+    [self.grid enumerateObjectsUsingBlock:^(NSArray *row, NSUInteger y, BOOL *stop) {
+        [row enumerateObjectsUsingBlock:^(NCHItem *item, NSUInteger x, BOOL *stop) {
+            if (item.hasMine){
+                item.cleared = show;
+                [updatedPositions addObject:[[NCHPosition alloc] initWithX:x Y:y]];
+            }
+        }];
+    }];
+    return updatedPositions;
+}
 
 - (void)setMineAtPosition:(NCHPosition *)position
 {
@@ -123,14 +136,14 @@ static const NSUInteger MineNumber = 10;
 
 
 
-- (NSSet *)cheat
+- (NSSet *)autoPlay
 {
-    BOOL cheated = NO;
-    while(!cheated && ![self validate]) {
+    BOOL played = NO;
+    while(!played && ![self validate]) {
         NCHPosition *randomPosition = [NCHPosition randomPositionWithGridSize:GridSize];
         NCHItem *item = [self itemAtPosition:randomPosition];
         if (!item.cleared && !item.hasMine) {
-            cheated = YES;
+            played = YES;
             return [self clearItemAtPosition:randomPosition];
         }
     }

@@ -18,6 +18,7 @@
 @end
 
 static NSString * const CellIdentifier  = @"NCHCell";
+static const NSTimeInterval PeekDelay = 2.0;
 
 @implementation NCHViewController
 
@@ -46,15 +47,29 @@ static NSString * const CellIdentifier  = @"NCHCell";
     [self alertForEndOfGameWithSuccess:valid];
 }
 
-- (IBAction)cheatPressed:(id)sender
+- (IBAction)playForMePressed:(id)sender
 {
-    NSSet *clearedPositions = [self.grid cheat];
+    NSSet *clearedPositions = [self.grid autoPlay];
     if (!clearedPositions) { // No more moves, we've won
         [self alertForEndOfGameWithSuccess:YES];
         return;
     }
     
     [self.collectionView reloadItemsAtIndexPaths:[NCHPosition indexPathsFromPositionSet:clearedPositions]];
+}
+
+- (IBAction)peekPressed:(id)sender
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSSet *updatedPositions = [self.grid revealMines:YES];
+        [self.collectionView reloadItemsAtIndexPaths:[NCHPosition indexPathsFromPositionSet:updatedPositions]];
+    });
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(PeekDelay * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        NSSet *updatedPositions = [self.grid revealMines:NO];
+        [self.collectionView reloadItemsAtIndexPaths:[NCHPosition indexPathsFromPositionSet:updatedPositions]];
+    });
 }
 
 #pragma mark - <UICollectionViewDataSource>

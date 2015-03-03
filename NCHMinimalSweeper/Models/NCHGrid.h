@@ -16,7 +16,9 @@
 
 - (void)addMines;
 
-- (NSSet *)cheat;
+- (NSSet *)revealMines:(BOOL)show;
+
+- (NSSet *)autoPlay;
 
 - (BOOL)validate;
 

@@ -64,59 +64,75 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="fae-Eh-X8q"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxw-MV-FTo">
-                                <rect key="frame" x="125" y="461" width="70" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ye-x9-zFh">
+                                <rect key="frame" x="120" y="40" width="79" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKZ-6e-Mc5">
+                                <rect key="frame" x="33" y="429" width="99" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGamePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7tq-zh-iPB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5W-uF-N0C">
+                                <rect key="frame" x="186" y="482" width="106" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play For Me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playForMePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dZs-4R-YiD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNw-OJ-Obu">
+                                <rect key="frame" x="47" y="482" width="70" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Validate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="validatePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="r7q-Nb-dJw"/>
+                                    <action selector="validatePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0QZ-3P-yz1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUr-eR-XT6">
-                                <rect key="frame" x="36" y="461" width="53" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yz-Gq-Axk">
+                                <rect key="frame" x="217" y="429" width="45" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Cheat">
+                                <state key="normal" title="Peek">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cheatPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aia-22-cEM"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ye-x9-zFh">
-                                <rect key="frame" x="120.5" y="40" width="79" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKZ-6e-Mc5">
-                                <rect key="frame" x="244" y="461" width="40" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="New">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="newGamePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e8C-zc-l8e"/>
+                                    <action selector="peekPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kU5-bw-ZOt"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Z4T-iQ-Ck1" firstAttribute="top" secondItem="cxw-MV-FTo" secondAttribute="bottom" constant="71" id="4e6-Zh-0pb"/>
+                            <constraint firstAttribute="centerX" secondItem="3Yz-Gq-Axk" secondAttribute="centerX" constant="-79.5" id="0Pp-OU-lW0"/>
+                            <constraint firstAttribute="centerX" secondItem="J5W-uF-N0C" secondAttribute="centerX" constant="-79" id="0Zo-Ja-Yc6"/>
+                            <constraint firstItem="NNw-OJ-Obu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="31" id="5gp-a7-I9T"/>
+                            <constraint firstItem="NNw-OJ-Obu" firstAttribute="top" secondItem="HKZ-6e-Mc5" secondAttribute="bottom" constant="17" id="9ew-HE-pyc"/>
                             <constraint firstAttribute="centerY" secondItem="nNs-bq-73i" secondAttribute="centerY" constant="84" id="B3b-z4-AiO"/>
+                            <constraint firstItem="Z4T-iQ-Ck1" firstAttribute="top" secondItem="NNw-OJ-Obu" secondAttribute="bottom" constant="50" id="DIM-yZ-WrM"/>
                             <constraint firstItem="8Ye-x9-zFh" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="40" id="GOs-nw-Vlk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J5W-uF-N0C" secondAttribute="trailing" constant="12" id="IEZ-NS-qHp"/>
+                            <constraint firstItem="Z4T-iQ-Ck1" firstAttribute="top" secondItem="J5W-uF-N0C" secondAttribute="bottom" constant="50" id="UHj-hD-0DR"/>
+                            <constraint firstItem="J5W-uF-N0C" firstAttribute="top" secondItem="3Yz-Gq-Axk" secondAttribute="bottom" constant="17" id="VcV-cW-s0G"/>
+                            <constraint firstAttribute="centerX" secondItem="HKZ-6e-Mc5" secondAttribute="centerX" constant="77.5" id="X6V-2r-fkK"/>
                             <constraint firstAttribute="centerX" secondItem="nNs-bq-73i" secondAttribute="centerX" id="gI2-SV-TRU"/>
-                            <constraint firstAttribute="centerX" secondItem="cxw-MV-FTo" secondAttribute="centerX" id="gZu-Fl-CTJ"/>
                             <constraint firstAttribute="centerX" secondItem="8Ye-x9-zFh" secondAttribute="centerX" id="hbM-dP-C3f"/>
-                            <constraint firstItem="sUr-eR-XT6" firstAttribute="centerY" secondItem="HKZ-6e-Mc5" secondAttribute="centerY" id="iz2-iT-6fD"/>
-                            <constraint firstItem="sUr-eR-XT6" firstAttribute="centerY" secondItem="cxw-MV-FTo" secondAttribute="centerY" id="mBn-oR-8Sc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HKZ-6e-Mc5" secondAttribute="trailing" constant="20" id="nF3-eJ-Emh"/>
-                            <constraint firstItem="Z4T-iQ-Ck1" firstAttribute="top" secondItem="cxw-MV-FTo" secondAttribute="bottom" constant="71" id="peX-e5-B7X"/>
-                            <constraint firstItem="sUr-eR-XT6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="qb3-gY-Fwz"/>
+                            <constraint firstAttribute="centerX" secondItem="3Yz-Gq-Axk" secondAttribute="centerX" constant="-79.5" id="jwg-qc-6Oi"/>
+                            <constraint firstAttribute="centerX" secondItem="J5W-uF-N0C" secondAttribute="centerX" constant="-79" id="lzs-p1-m9o"/>
+                            <constraint firstAttribute="centerX" secondItem="NNw-OJ-Obu" secondAttribute="centerX" constant="78" id="rjN-QK-M9V"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -126,6 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="300" y="190"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
